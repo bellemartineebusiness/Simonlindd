@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Background (transparent) -->
+
+  <!-- Cloud body -->
+  <ellipse cx="250" cy="200" rx="160" ry="110" fill="#3AACBE" stroke="#1A1A2E" stroke-width="12"/>
+
+  <!-- Left cloud puff -->
+  <ellipse cx="145" cy="175" rx="78" ry="72" fill="#5BBFCF" stroke="#1A1A2E" stroke-width="12"/>
+
+  <!-- Right cloud puff -->
+  <ellipse cx="345" cy="185" rx="65" ry="60" fill="#4AB8CA" stroke="#1A1A2E" stroke-width="12"/>
+
+  <!-- Top center puff -->
+  <ellipse cx="250" cy="145" rx="70" ry="60" fill="#5BBFCF" stroke="#1A1A2E" stroke-width="12"/>
+
+  <!-- Cloud body overlay (to clean up overlapping strokes) -->
+  <ellipse cx="250" cy="205" rx="155" ry="105" fill="#3AACBE"/>
+  <ellipse cx="145" cy="178" rx="73" ry="67" fill="#5BBFCF"/>
+  <ellipse cx="345" cy="188" rx="60" ry="56" fill="#4AB8CA"/>
+  <ellipse cx="250" cy="148" rx="65" ry="56" fill="#5BBFCF"/>
+
+  <!-- White highlight / gloss -->
+  <ellipse cx="195" cy="163" rx="35" ry="18" fill="white" opacity="0.25" transform="rotate(-20, 195, 163)"/>
+  <ellipse cx="175" cy="152" rx="12" ry="7" fill="white" opacity="0.35" transform="rotate(-20, 175, 152)"/>
+
+  <!-- Curved line on cloud (like original logo detail) -->
+  <path d="M 185 210 Q 235 240 290 210" fill="none" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Cloud outer border (redrawn on top) -->
+  <ellipse cx="250" cy="205" rx="155" ry="105" fill="none" stroke="#1A1A2E" stroke-width="11"/>
+  <ellipse cx="145" cy="178" rx="73" ry="67" fill="none" stroke="#1A1A2E" stroke-width="11"/>
+  <ellipse cx="345" cy="188" rx="60" ry="56" fill="none" stroke="#1A1A2E" stroke-width="11"/>
+  <ellipse cx="250" cy="148" rx="65" ry="56" fill="none" stroke="#1A1A2E" stroke-width="11"/>
+
+  <!-- Circuit lines from cloud base -->
+  <!-- Line 1 (far left) -->
+  <line x1="175" y1="300" x2="175" y2="350" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="175" y1="350" x2="130" y2="350" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="130" y1="350" x2="130" y2="390" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="130" cy="408" r="18" fill="#D4A520" stroke="#1A1A2E" stroke-width="7"/>
+
+  <!-- Line 2 (left-center) -->
+  <line x1="215" y1="300" x2="215" y2="380" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="215" y1="380" x2="195" y2="380" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="195" y1="380" x2="195" y2="425" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="195" cy="443" r="18" fill="#D4A520" stroke="#1A1A2E" stroke-width="7"/>
+
+  <!-- Line 3 (center) -->
+  <line x1="250" y1="300" x2="250" y2="445" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="250" cy="463" r="18" fill="#D4A520" stroke="#1A1A2E" stroke-width="7"/>
+
+  <!-- Line 4 (right-center) -->
+  <line x1="285" y1="300" x2="285" y2="380" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="285" y1="380" x2="305" y2="380" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="305" y1="380" x2="305" y2="425" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="305" cy="443" r="18" fill="#D4A520" stroke="#1A1A2E" stroke-width="7"/>
+
+  <!-- Line 5 (far right) -->
+  <line x1="325" y1="300" x2="325" y2="350" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="325" y1="350" x2="370" y2="350" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <line x1="370" y1="350" x2="370" y2="390" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="370" cy="408" r="18" fill="#D4A520" stroke="#1A1A2E" stroke-width="7"/>
+</svg>
