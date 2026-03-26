@@ -42,6 +42,23 @@
     });
   }
 
+  // ---- Portfolio filters ----
+  const filterBtns = document.querySelectorAll('.portfolio-filter');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+  if (filterBtns.length && portfolioCards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        portfolioCards.forEach(card => {
+          const match = filter === 'alla' || card.dataset.category === filter;
+          card.setAttribute('aria-hidden', match ? 'false' : 'true');
+        });
+      });
+    });
+  }
+
   // ---- Cookie consent ----
   const COOKIE_KEY = 'sl_cookie_consent';
 
@@ -179,7 +196,7 @@
   document.head.appendChild(style);
 
   const revealEls = document.querySelectorAll(
-    '.service-card, .package-card, .step, .testimonial-card, .value-item'
+    '.service-card, .package-card, .step, .testimonial-card, .value-item, .portfolio-card'
   );
   revealEls.forEach(el => el.classList.add('reveal'));
 
