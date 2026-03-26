@@ -1003,6 +1003,171 @@ footer {
 }
 .modal-footer .btn { flex: 1; min-width: 140px; justify-content: center; display: flex; align-items: center; }
 
+
+/* ============================================================
+   PORTFOLIO / PORTFÖLJ
+   ============================================================ */
+#portfölj {
+  padding: 100px 0;
+  background: var(--white);
+}
+#portfölj .intro { margin-bottom: 48px; }
+
+/* Filter buttons */
+.portfolio-filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.portfolio-filter {
+  padding: 9px 22px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--grey-mid);
+  background: transparent;
+  color: var(--text);
+  transition: var(--transition);
+}
+.portfolio-filter:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+.portfolio-filter.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+
+/* Portfolio grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* Portfolio card */
+.portfolio-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--grey-mid);
+  background: var(--white);
+  transition: var(--transition);
+}
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+.portfolio-card[aria-hidden="true"] { display: none; }
+
+/* Portfolio image / mockup area */
+.portfolio-img {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Browser mockup inside card */
+.portfolio-mockup {
+  width: 80%;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transform: perspective(600px) rotateX(4deg);
+  transition: transform 0.4s ease;
+}
+.portfolio-card:hover .portfolio-mockup {
+  transform: perspective(600px) rotateX(0deg) scale(1.03);
+}
+.mockup-bar {
+  background: rgba(255,255,255,0.12);
+  padding: 7px 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.mockup-bar span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+.mockup-bar span:first-child { background: #ff6b6b; }
+.mockup-bar span:nth-child(2) { background: #ffd93d; }
+.mockup-bar span:nth-child(3) { background: #6bcb77; }
+.mockup-content {
+  padding: 14px 16px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.mockup-logo {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+.mockup-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mockup-line {
+  height: 6px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 3px;
+}
+.mockup-line.w80 { width: 80%; }
+.mockup-line.w60 { width: 60%; }
+.mockup-line.w40 { width: 40%; }
+
+/* Portfolio info */
+.portfolio-info {
+  padding: 24px 28px;
+}
+.portfolio-tag {
+  display: inline-block;
+  background: rgba(58, 172, 190, 0.12);
+  color: var(--teal-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+.portfolio-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+.portfolio-info p {
+  font-size: 0.9rem;
+  color: #666677;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+.portfolio-result {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  background: rgba(58, 172, 190, 0.08);
+  border-radius: 6px;
+  padding: 7px 12px;
+  display: inline-block;
+}
+
 /* ============================================================
    PAGE HEADER (for sub-pages)
    ============================================================ */
@@ -1109,5 +1274,6 @@ footer {
   .modal-box { padding: 24px; }
   .packages-grid { grid-template-columns: 1fr; }
   .package-card.popular { transform: none; }
+  .portfolio-grid { grid-template-columns: 1fr; }
   .about-values { grid-template-columns: 1fr; }
 }
