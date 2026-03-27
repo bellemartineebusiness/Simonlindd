@@ -1106,6 +1106,22 @@ footer {
   color: inherit;
 }
 
+.portfolio-card-link--projektgaranti {
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+  justify-self: center;
+}
+
+.portfolio-card-link--projektgaranti .portfolio-card {
+  border: 2px solid var(--teal);
+  box-shadow: 0 8px 40px rgba(58,172,190,0.2);
+}
+
+.portfolio-card-link--projektgaranti .portfolio-card:hover {
+  border-color: var(--teal);
+}
+
 .portfolio-card-link:hover {
   color: inherit;
 }
