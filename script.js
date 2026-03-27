@@ -19,9 +19,7 @@
   const navToggle = document.getElementById('navToggle');
   const navLinks  = document.getElementById('navLinks');
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', isOpen);
+    const toggleBars = (isOpen) => {
       navToggle.querySelectorAll('span').forEach((s, i) => {
         if (isOpen) {
           if (i === 0) s.style.transform = 'rotate(45deg) translate(5px,6px)';
@@ -32,13 +30,36 @@
           s.style.opacity = '';
         }
       });
+    };
+
+    const setMenuState = (isOpen) => {
+      navLinks.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+      toggleBars(isOpen);
+    };
+
+    navToggle.addEventListener('click', () => {
+      setMenuState(!navLinks.classList.contains('open'));
     });
+
     // Close menu when a link is clicked
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+        setMenuState(false);
       });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 640 && navLinks.classList.contains('open')) {
+        setMenuState(false);
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+        setMenuState(false);
+      }
     });
   }
 
