@@ -274,7 +274,6 @@ h1, h2, h3, h4 {
   gap: 32px;
   margin-top: 48px;
   padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.1);
 }
 .stat-item .num {
   font-size: 2rem;
@@ -508,7 +507,6 @@ h1, h2, h3, h4 {
   color: #888;
   margin-bottom: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--grey-mid);
 }
 .package-features {
   list-style: none;
@@ -1276,4 +1274,17 @@ footer {
   .package-card.popular { transform: none; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .about-values { grid-template-columns: 1fr; }
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;  /* bredare grid */
+  margin: 0 auto;
+}
+
+.portfolio-card {
+  max-width: 800px;    /* bredare kort */
+  margin: 0 auto;
 }
