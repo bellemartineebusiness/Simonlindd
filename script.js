@@ -19,24 +19,11 @@
   const navToggle = document.getElementById('navToggle');
   const navLinks  = document.getElementById('navLinks');
   if (navToggle && navLinks) {
-    const toggleBars = (isOpen) => {
-      navToggle.querySelectorAll('span').forEach((s, i) => {
-        if (isOpen) {
-          if (i === 0) s.style.transform = 'rotate(45deg) translate(5px,6px)';
-          if (i === 1) s.style.opacity = '0';
-          if (i === 2) s.style.transform = 'rotate(-45deg) translate(5px,-6px)';
-        } else {
-          s.style.transform = '';
-          s.style.opacity = '';
-        }
-      });
-    };
-
     const setMenuState = (isOpen) => {
       navLinks.classList.toggle('open', isOpen);
       navToggle.setAttribute('aria-expanded', isOpen);
       document.body.classList.toggle('menu-open', isOpen);
-      toggleBars(isOpen);
+      navToggle.classList.toggle('is-active', isOpen);
     };
 
     navToggle.addEventListener('click', () => {
